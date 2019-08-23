@@ -1,3 +1,15 @@
-<p>
-  login works!
-</p>
+<p>nombre: </p>
+<input type="text" id="nombre" [(ngModel)]="usuario.nombre">
+<p>clave</p>
+<input type="text" id="clave" [(ngModel)]="usuario.clave">
+<br>
+<button (click)="Ingresar()">Ingresar</button>
+<div *ngIf="ingresado">
+<p>{{usuario.nombre}}</p>
+<p>{{usuario.clave}}</p>
+</div>
+
+<div [hidden]="!ingresado">
+  <p>{{usuario.nombre}}</p>
+  <p>{{usuario.clave}}</p>
+  </div>

@@ -3,10 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-
+import {FormsModule} from '@angular/forms';
 
 import { BienvenidoComponent } from './componentes/bienvenido/bienvenido.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LoginComponent } from './componentes/login/login.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
 
   ],
   providers: [],
